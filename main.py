@@ -9,7 +9,7 @@ import time
 
 app = Flask(__name__)
 
-# Global variable to store latest opportunities
+# store latest opportunities
 latest_opportunities = []
 latest_update_time = None
 latest_pairs_count = 0
@@ -50,7 +50,7 @@ def find_arbitrage_cycles(prices: Dict[str, float], min_profit: float = 0.01) ->
     currencies = set()
     for pair in prices.keys():
         base, quote = pair.split('_')
-        currencies.add(base)
+        currencies.add(base)    
         currencies.add(quote)
     
     opportunities = []
